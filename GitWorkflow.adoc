@@ -1,0 +1,10 @@
+= Git Workflow
+Meredith Winchell, Jackie McCarthy, and Nate Alberda
+:description: The document's description. 
+:url-repo: https://github.com/mwinchell/PTW_320_Beta_Project.git
+
+== Pre-requisites
+Before starting, ensure you have the following installed:
+* https://github.com/git-guides/install-git [Git^]
+* A text editor or IDE of your choice (e.g., Visual Studio Code)
+* Access to a project repository
