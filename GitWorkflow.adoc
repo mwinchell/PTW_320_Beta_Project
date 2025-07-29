@@ -13,9 +13,10 @@ Before starting, ensure you have the following installed:
 This document outlines the Git workflow starting from the inital setup of a project repository to the iterative process of pushing your commits and pulling from GitHub. It is designed to help you understand how to effectively use Git for version control in your technical writing projects. This is following the "Write the Docs" philosophy, which emphasizes collaboration and iterative development between writers and developers. Git is a powerful tool that allows you to track changes, collaborate with others, and manage your project efficiently.
 
 == Setting Up Your Project Repository
-To begin, you need to set up your project repository. This involves creating a new repository on GitHub and cloning it to your local machine. Follow these steps:
-1. Go to GitHub and create a new repository. Make sure to initialize it with a README file. //screenshot of creating a new repository
-    - Click on the "New" button in the repositories section.
+To begin, you need to set up your project repository. To contribute to an existing project skip to "Forking a Repository". Setting up a new repository involves creating a new repository on GitHub and cloning it to your local machine. Follow these steps:
+1. Go to GitHub and create a new repository. Make sure to initialize it with a README file. 
+//screenshot of creating a new repository
+    - Select on the "New" button in the repositories section.
     - Fill in the repository name and description.
     - Choose visibility (public or private)
     - Select "Create repository"
@@ -28,5 +29,25 @@ To begin, you need to set up your project repository. This involves creating a n
    cd <repository-name>
    ```
 4. Open the repository in your text editor or IDE.
+
+== Forking a Repository
+If you are contributing to an existing project, you may need to fork the repository first. This allows you to create your own copy of the repository where you can make changes without affecting the original project. To fork a repository:
+1. Go to the repository page on GitHub. 
+//screenshot of repository page with fork button circled
+   - Ensure you are on the main page of the repository you want to fork.
+2. Click on the "Fork" button in the top right corner.
+3. Select your GitHub account as the destination for the fork.
+4. Clone your forked repository to your local machine using the command:
+   ```
+   git clone <forked-repository-url>
+   ```
+5. Navigate to the cloned forked repository directory:
+   ```
+   cd <forked-repository-name>
+   ```
+6. Add the original repository as a remote to keep track of changes:
+   ```
+   git remote add upstream <original-repository-url>
+   ```
 
 == Making Changes and Committing
