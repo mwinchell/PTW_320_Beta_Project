@@ -4,16 +4,18 @@ Meredith Winchell, Jackie McCarthy, and Nate Alberda
 :url-repo: https://github.com/mwinchell/PTW_320_Beta_Project.git
 
 == Pre-requisites
-Before starting, ensure you have the following installed:
-* https://github.com/git-guides/install-git [Git^]
-* A text editor or IDE of your choice (e.g., Visual Studio Code)
-* Access to a project repository
+Before starting, ensure you have the following:
+
+- https://github.com/git-guides/install-git [Git]
+- A text editor or IDE of your choice (e.g., Visual Studio Code)
+- A GitHub account. If you do not have one, you can create an account at [GithHub.com](https://github.com/).
 
 == Introduction
-This document outlines the Git workflow starting from the inital setup of a project repository to the iterative process of pushing your commits and pulling from GitHub. It is designed to help you understand how to effectively use Git for version control in your technical writing projects. This is following the "Write the Docs" philosophy, which emphasizes collaboration and iterative development between writers and developers. Git is a powerful tool that allows you to track changes, collaborate with others, and manage your project efficiently.
+This document outlines a Git workflow. It includes the inital setup of a project repository and the iterative process of pushing your commits and pulling from GitHub. It is designed to help you understand how to effectively use Git for version control in your technical writing projects. This is following the "Write the Docs" philosophy, which emphasizes collaboration and iterative development between writers and developers. Git is a powerful tool that allows you to track changes, collaborate with others, and manage your project efficiently.
 
 == Setting Up Your Project Repository
 To begin, you need to set up your project repository. To contribute to an existing project skip to "Forking a Repository". Setting up a new repository involves creating a new repository on GitHub and cloning it to your local machine. Follow these steps:
+
 1. Go to GitHub and create a new repository. Make sure to initialize it with a README file. 
 //screenshot of creating a new repository
     - Select on the "New" button in the repositories section.
