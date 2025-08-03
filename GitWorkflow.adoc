@@ -36,7 +36,7 @@ To begin, you need to set up your project repository. To contribute to an existi
 If you are contributing to an existing project, you may need to fork the repository first. This allows you to create your own copy of the repository where you can make changes without affecting the original project. To fork a repository:
 
 1. Go to the repository page on GitHub. 
-//screenshot of repository page with fork button circled
+image::https://github.com/mwinchell/PTW_320_Beta_Project/blob/main/Images/Forking%20a%20Repository.png?raw=true[Alt Text: An image highlighting the "Fork" button on GitHub, align=center]
    - Ensure you are on the main page of the repository you want to fork.
 2. Click on the "Fork" button in the top right corner.
 3. Select your GitHub account as the destination for the fork.
