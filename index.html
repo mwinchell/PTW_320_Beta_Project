@@ -445,6 +445,58 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div class="sect1">
+<h2 id="_introduction">Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This guide introduces the basics of using Git. Git is a tool that helps you track and manage changes when working on writing or documentation projects. Whether you&#8217;re starting a new project or contributing to an existing one, Git gives you a way to save your work in clear steps, collaborate with others, and stay organized over time.
+In this guide, you&#8217;ll learn how to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Set up a Git project from scratch or work with an existing one</p>
+</li>
+<li>
+<p>Make changes, save them, and share updates through GitHub</p>
+</li>
+<li>
+<p>Keep your files in sync when working with teammates</p>
+</li>
+<li>
+<p>Contribute to shared projects by submitting edits for review</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_docs_as_code">What Is “Docs as Code”?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>“Docs as code” means treating documentation with the same tools and processes developers use to write software. Writers use plain text formats (like Markdown), version control systems (like Git), and collaborate via platforms such as GitHub.</p>
+</div>
+<div class="paragraph">
+<p>This approach helps technical writers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Track changes</p>
+</li>
+<li>
+<p>Work closely with developers</p>
+</li>
+<li>
+<p>Improve editing process</p>
+</li>
+<li>
+<p>Contribute iteratively</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_pre_requisites">Pre-requisites</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -466,18 +518,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introduction">Introduction</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This document outlines a Git workflow. It includes the inital setup of a project repository and the iterative process of pushing your commits and pulling from GitHub. It is designed to help you understand how to effectively use Git for version control in your technical writing projects. This is following the "Write the Docs" philosophy, which emphasizes collaboration and iterative development between writers and developers. Git is a powerful tool that allows you to track changes, collaborate with others, and manage your project efficiently.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_setting_up_your_project_repository">Setting Up Your Project Repository</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>To begin, you need to set up your project repository. To contribute to an existing project skip to "Forking a Repository". Setting up a new repository involves creating a new repository on GitHub and cloning it to your local machine. Follow these steps:</p>
+<p>(To contribute to an existing project skip to "Forking a Repository".)
+To begin, you need to set up your project repository. Setting up a new repository involves creating a new repository on GitHub and cloning it to your local machine. Cloning to a local repository gives you a working version of code or documentation to make edits, test ideas, and draft revisions without altering the source material. Follow these steps:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -517,18 +562,35 @@ cd &lt;repository-name&gt;
 </li>
 </ol>
 </div>
+<div class="sect2">
+<h3 id="_when_do_you_clone">When do you clone?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>When you start working on a new project you&#8217;ve created</p>
+</li>
+<li>
+<p>When you fork someone else&#8217;s repository and want a local version</p>
+</li>
+<li>
+<p>When collaborating and need a personal working environment</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_forking_a_repository">Forking a Repository</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you are contributing to an existing project, you may need to fork the repository first. This allows you to create your own copy of the repository where you can make changes without affecting the original project. To fork a repository:</p>
+<p>If you are contributing to an existing project, you may need to fork the repository first. Forking a repository means to create your own copy of the repository where you can make changes without affecting the original project. To fork a repository:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to the repository page on GitHub.</p>
+<p>Go to the repository page on GitHub.
+image::https://github.com/mwinchell/PTW_320_Beta_Project/blob/main/Images/Forking%20a%20Repository.png?raw=true[Alt Text: An image highlighting the "Fork" button on GitHub, align=center]</p>
 <div class="ulist">
 <ul>
 <li>
@@ -563,13 +625,29 @@ git remote add upstream &lt;original-repository-url&gt;
 </li>
 </ol>
 </div>
+<div class="sect2">
+<h3 id="_when_do_you_fork">When do you Fork?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>When contributing to someone else&#8217;s open-source project</p>
+</li>
+<li>
+<p>When building on a template or tutorial</p>
+</li>
+<li>
+<p>When customizing a shared resource privately</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_making_changes_and_committing">Making Changes and Committing</h2>
+<h2 id="_making_committing_and_pushing_changes">Making, Committing and Pushing Changes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Once you have your repository set up or forked, you can start making changes. Follow these steps to make changes and commit them:</p>
+<p>Once you have your repository set up or forked, you can start making, committing, and pushing changes. To commit means to save a snapshot of your project at a specific moment. Each commit has a unique ID and a short message explaining the changes that were made. To push means to send your committed changes from your local project to the version stored on GitHub (or another remote repository).</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -618,8 +696,52 @@ git push origin &lt;branch-name&gt;
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p>Do this as many times as you need to while working on your project. Each time you make changes, repeat the steps of staging, committing, and pushing.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Do this as many times as you need to while working on your project. Each time you make changes, repeat the steps of staging, committing, and pushing.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_when_do_you_commit">When do you commit?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>After editing a file</p>
+</li>
+<li>
+<p>When completing a task or fixing an issue</p>
+</li>
+<li>
+<p>Before switching focus to a new section of your project</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_when_do_you_push">When do you push?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>When you want to share changes with your team</p>
+</li>
+<li>
+<p>When you want to back-up your work online</p>
+</li>
+<li>
+<p>When you’re ready to submit changes for review</p>
+</li>
+<li>
+<p>When you’ve resolved an issue</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -627,7 +749,7 @@ git push origin &lt;branch-name&gt;
 <h2 id="_pulling_changes_from_the_original_repository">Pulling Changes from the Original Repository</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>If you are working on a forked repository, it&#8217;s important to keep your fork up to date with the original repository. To do this, you need to pull changes from the original repository. Follow these steps:</p>
+<p>If you are working on a forked repository, it&#8217;s important to keep your fork up to date by pulling from the original repository and merging with your local project. To pull means to fetch the latest updates from a shared repository and merge them into your local project. To merge means to combine changes from one branch to another. Follow these steps:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -660,13 +782,45 @@ git push origin &lt;branch-name&gt;
 </li>
 </ol>
 </div>
+<div class="sect2">
+<h3 id="_when_do_you_pull">When do you pull?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>When you need to catch up on group changes</p>
+</li>
+<li>
+<p>When you need to integrate changes</p>
+</li>
+<li>
+<p>When you want to avoid overwrite issues</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_when_do_you_merge">When do you merge?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>After reviewing a collaborator’s pull request (see below)</p>
+</li>
+<li>
+<p>When incorporating changes from the original repository</p>
+</li>
+<li>
+<p>Before publishing a unified version of the project</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_creating_a_pull_request">Creating a Pull Request</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Once you have made changes to your forked repository and pushed them, you can create a pull request to propose your changes to the original repository. Follow these steps:</p>
+<p>Once you have made changes to your forked repository and pushed them, you can create a pull request to propose your changes to the original repository. A pull request is a formal request to merge your branch into another, usually the main project. Follow these steps:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -690,13 +844,54 @@ git push origin &lt;branch-name&gt;
 </li>
 </ol>
 </div>
+<div class="sect2">
+<h3 id="_when_do_you_make_a_pull_request">When do you make a pull request?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>When your contribution is ready for review</p>
+</li>
+<li>
+<p>To initiate collaboration, discussion, or feedback</p>
+</li>
+<li>
+<p>When you believe your changes are ready to merge with the main branch</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_conclusion">Conclusion</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document has provided an overview of the Git workflow, including setting up a project repository, forking a repository, making changes, committing, pulling changes, and creating a pull request. By following these steps, you can effectively use Git for version control in your technical writing projects. Remember to regularly pull changes from the original repository to keep your fork up to date and to communicate clearly in your pull requests.</p>
+<p>This document has provided an overview of the Git workflow, including setting up a project repository, forking a repository, making changes, committing, pulling changes, and creating a pull request. By following these steps, you can enjoy the benefits of using Git for version control in your technical writing projects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tracking revisions across drafts and documents</p>
+</li>
+<li>
+<p>Collaborating with contributors without overwriting each other&#8217;s work</p>
+</li>
+<li>
+<p>Reviewing and reverting changes</p>
+</li>
+<li>
+<p>Testing updates in isolated branches</p>
+</li>
+<li>
+<p>Archiving work with transparency and traceability</p>
+</li>
+<li>
+<p>Prevent data loss</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Remember to regularly pull changes from the original repository to keep your fork up to date and to communicate clearly in your pull requests.</p>
 </div>
 </div>
 </div>
@@ -721,7 +916,7 @@ git push origin &lt;branch-name&gt;
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-07-29 22:05:06 -0400
+Last updated 2025-08-03 21:35:00 -0400
 </div>
 </div>
 </body>
