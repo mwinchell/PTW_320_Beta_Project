@@ -9,10 +9,12 @@
 <meta name="author" content="Meredith Winchell, Jackie McCarthy, and Nate Alberda">
 <title>Git Workflow</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+
+   <link rel="icon" href="C:\Users\n8alb\PTW_320_Beta_Project\Images\logo.png" type="image/x-icon">
 <style>
-/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
-/* Uncomment the following line when using as a custom stylesheet */
-/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+
+ @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
+
 html{font-family:sans-serif;-webkit-text-size-adjust:100%}
 a{background:none}
 a:focus{outline:thin dotted}
@@ -135,7 +137,17 @@ b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
 b.button::before{content:"[";padding:0 3px 0 2px}
 b.button::after{content:"]";padding:0 2px 0 3px}
 p a>code:hover{color:rgba(0,0,0,.9)}
-#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+
+@media (min-width: 901px) {
+  #header,#content,#footnotes,#footer {
+    width:100%;
+    margin:0 auto;
+    max-width:62.5em;
+    position:relative;
+    padding-left:.9375em;
+    padding-right:.9375em;
+  }
+}
 #header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
 #header::after,#content::after,#footnotes::after,#footer::after{clear:both}
 #content{margin-top:1.25em}
@@ -181,7 +193,8 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em;z-index:100}
 #footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
 #content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
@@ -434,10 +447,325 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer{background:none}
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+
+header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  
+  /* Shell style for all code examples */
+  pre, code, .listingblock, .literalblock {
+    background: #23272e !important;
+    color: #e0e7ff !important;
+    border-radius: 6px !important;
+    border: 1px solid #444a57 !important;
+    padding: 1.1em 1.5em !important;
+    font-family: 'Droid Sans Mono', 'DejaVu Sans Mono', monospace !important;
+    font-size: 1em !important;
+    overflow-x: auto !important;
+    margin-bottom: 1.5em !important;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    display: flex;
+  }
+}
+
+@media (max-width: 900px) {
+  #content, #header, #footer, body, #content > *, #footer > *, body > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    float: none !important;
+  }
+  pre, code, .listingblock, .literalblock {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+    overflow-x: auto !important;
+  }
+  #content, #header, #footer, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .side-fixed-column, .left-fixed-column, .right-fixed-column {
+    display: none !important;
+  }
+
+  .left-fixed-column, .side-fixed-column {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    display: none !important;
+  }
+  
+  .nav-toggle-btn, .side-drawer {
+    position: static !important;
+  }
+}
+
+@media (max-width: 720px) {
+
+  .side-fixed-column, .left-fixed-column, .right-fixed-column {
+    display: none !important;
+  }
+  .left-fixed-column, .side-fixed-column {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    display: none !important;
+  }
+
+  .nav-toggle-btn, .side-drawer {
+    position: static !important;
+  }
+  .side-fixed-column {
+    display: none !important;
+  }
+  .nav-toggle-btn {
+    display: block !important;
+  }
+  
+  #content, #footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+  }
+  .nav-toggle-btn {
+    display: block !important;
+    position: fixed !important;
+    top: 76px !important;
+    left: 12px !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.2em !important;
+    padding: 4px !important;
+    border-radius: 50% !important;
+    z-index: 201 !important;
+  }
+}
+.nav-toggle-btn {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  z-index: 200;
+  background: #764ba2;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  font-size: 2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+}
+ .side-drawer {
+   display: none;
+   position: absolute;
+   top: 76px;
+   left: 0;
+   width: 80vw;
+   max-width: 320px;
+   min-height: 200px;
+   background: #fff;
+   box-shadow: 2px 0 12px rgba(118,75,162,0.18);
+   z-index: 300;
+   padding: 2em 1.5em;
+   overflow-y: auto;
+   color: #764ba2;
+   font-size: 1.1em;
+ }
+
+.side-drawer.open {
+  display: block;
+  animation: slideInLeft 0.25s;
+}
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+.side-drawer .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  background: #fff;
+  border: none;
+  font-size: 2em;
+  color: #764ba2;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.12);
+  border-radius: 50%;
+  padding: 0.1em 0.4em;
+}
+
+
+
 </style>
 </head>
 <body class="article">
+
+<nav style="width:100%;height:10%;background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);padding:0.5em 0 0.5em 0.5em;box-sizing:border-box;position:fixed;top:0;left:0;z-index:100;">
+<div class="side-fixed-column left-fixed-column" style="position:absolute;top:76px;left:0;width:220px;background:linear-gradient(135deg,#e0e7ff 0%,#c3aed6 100%);z-index:98;display:flex;align-items:flex-start;justify-content:center;box-shadow:2px 0 8px rgba(118,75,162,0.07);">
+  <div style="font-size:1.1em;color:#764ba2;font-weight:bold;text-align:left;writing-mode:initial;transform:none;padding:2em 1em 2em 1em;">
+    <strong>Table of Contents</strong><br>
+    <ul style="padding-left: 1em; margin-top: 1.2em;">
+      <li style="margin-bottom: 1em;"><a href="#_introduction">Intro</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_what_is_docs_as_code">Docs as Code</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_pre_requisites">Pre-reqs</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_setting_up_your_project_repository">Setup</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_forking_a_repository">Forking</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_making_committing_and_pushing_changes">Committing</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_pulling_changes_from_the_original_repository">Pulling</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_creating_a_pull_request">Pull Requests</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_conclusion">Conclusion</a></li>
+      <li style="margin-bottom: 1em;"><a href="#_additional_resources">Resources</a></li>
+    </ul>
+  </div>
+</div>
+<div class="side-fixed-column right-fixed-column" style="position:absolute;top:76px;right:0;width:220px;background:linear-gradient(225deg,#e0e7ff 0%,#c3aed6 100%);z-index:98;display:flex;align-items:flex-start;justify-content:center;box-shadow:-2px 0 8px rgba(118,75,162,0.07);">
+  <div style="font-size:1.1em;color:#764ba2;font-weight:bold;text-align:left;padding:2em 1em 2em 1em;">
+    <strong>Other Articles</strong><br>
+    <ul style="padding-left:1.2em; margin-top: 1.2em;">
+      <li style="margin-bottom: 1em;"><a href="https://bacon8er-gamer.github.io/PTW_320_Alpha_Project/" target="_blank">AI Assisted Coding for Secondary Students</a></li>
+      <li style="margin-bottom: 1em;"><a href="https://bacon8er-gamer.github.io/GitHubAdvanced/" target="_blank">GitHub for Advanced Users</a></li>
+      <li style="margin-bottom: 1em;"><a href="https://bacon8er-gamer.github.io/VSCode/" target="_blank">Visual Studio Code for Technical Writers</a></li>
+      <li style="margin-bottom: 1em;"><a href="https://bacon8er-gamer.github.io/Asciidoc/" target="_blank">AsciiDoc Guide for Technical Writers</a></li>
+    </ul>
+  </div>
+</div>
+<script>
+// Make columns extend only to the top of the footer, so they appear beside it
+function adjustColumnsToFooter() {
+  var leftCol = document.querySelector('.left-fixed-column');
+  var rightCol = document.querySelector('.right-fixed-column');
+  var nav = document.querySelector('nav');
+  var footer = document.getElementById('footer');
+  if (!leftCol || !rightCol || !nav || !footer) return;
+  var navRect = nav.getBoundingClientRect();
+  var navBottom = navRect.bottom + window.scrollY;
+  var footerRect = footer.getBoundingClientRect();
+  var footerTop = footerRect.top + window.scrollY;
+  var colHeight = footerTop - navBottom;
+  if (colHeight < 0) colHeight = 0;
+  leftCol.style.height = colHeight + 'px';
+  rightCol.style.height = colHeight + 'px';
+}
+window.addEventListener('scroll', adjustColumnsToFooter);
+window.addEventListener('resize', adjustColumnsToFooter);
+window.addEventListener('DOMContentLoaded', adjustColumnsToFooter);
+// Dynamically stretch columns to the bottom of the page (not just viewport)
+function stretchColumnsToBottom() {
+  var leftCol = document.querySelector('.left-fixed-column');
+  var rightCol = document.querySelector('.right-fixed-column');
+  var nav = document.querySelector('nav');
+  if (!leftCol || !rightCol || !nav) return;
+  var navRect = nav.getBoundingClientRect();
+  var navBottom = navRect.bottom + window.scrollY;
+  var pageHeight = Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight,
+    document.body.offsetHeight,
+    document.documentElement.offsetHeight,
+    document.body.clientHeight,
+    document.documentElement.clientHeight
+  );
+  var colHeight = pageHeight - navBottom;
+  if (colHeight < 0) colHeight = 0;
+  leftCol.style.height = colHeight + 'px';
+  rightCol.style.height = colHeight + 'px';
+}
+window.addEventListener('scroll', stretchColumnsToBottom);
+window.addEventListener('resize', stretchColumnsToBottom);
+window.addEventListener('DOMContentLoaded', stretchColumnsToBottom);
+// Mobile nav drawer toggle
+
+// Adjust column heights to stop above the footer
+
+window.addEventListener('scroll', adjustColumnHeights);
+window.addEventListener('resize', adjustColumnHeights);
+window.addEventListener('DOMContentLoaded', adjustColumnHeights);
+
+// Adjust column heights to stop before the footer
+function adjustColumnHeights() {
+  var footer = document.getElementById('footer');
+  var leftCol = document.querySelector('.left-fixed-column');
+  var rightCol = document.querySelector('.right-fixed-column');
+  var nav = document.querySelector('nav');
+  if (!footer || !leftCol || !rightCol || !nav) return;
+  var navHeight = nav.offsetHeight;
+  var footerRect = footer.getBoundingClientRect();
+  var windowHeight = window.innerHeight;
+  var footerHeight = footer.offsetHeight;
+  var docHeight = document.body.scrollHeight;
+  var scrollY = window.scrollY || window.pageYOffset;
+  var footerTop = footer.offsetTop;
+  var colHeight;
+  // If the footer is visible in the viewport, columns should stop above it
+  var colMax = Math.min(windowHeight, footerTop - scrollY);
+  colHeight = Math.max(0, colMax - navHeight);
+  // If the footer is not visible, columns go to bottom of viewport
+  if (footerTop > scrollY + windowHeight) {
+    colHeight = windowHeight - navHeight;
+  }
+  leftCol.style.height = colHeight + 'px';
+  rightCol.style.height = colHeight + 'px';
+}
+window.addEventListener('scroll', adjustColumnHeights);
+window.addEventListener('resize', adjustColumnHeights);
+window.addEventListener('DOMContentLoaded', adjustColumnHeights);
+</script>
+  <div style="display:flex;align-items:center;justify-content:space-between;width:100%;">
+    <div style="display:inline-flex;align-items:center;">
+      <img src="Images/logo.png" alt="Logo" style="height:50px;width:50px;vertical-align:middle;margin-right:1em;">
+      <span style="color:#fff;text-decoration:none;font-weight:bold;font-size:1.3em;">Gryffinclaw Solutions</span>
+    </div>
+    <span style="color: #fff;text-decoration:none;font-weight:bold;font-size:1.3em;text-align:right;">Students. Coders. Creators.</span>
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<div style="margin-left:220px;margin-right:220px;">
 <div id="header">
+<!-- Hamburger button -->
+<button class="nav-toggle-btn" id="openNavBtn" title="Open Navigation" aria-label="Open Navigation">☰</button>
+
+<!-- Side drawer -->
+<div class="side-drawer" id="sideDrawer">
+  <button class="close-btn" id="closeNavBtn" title="Close Navigation" aria-label="Close Navigation">×</button>
+  <!-- Drawer content goes here -->
+  <div style="margin-top:2em;">
+    <strong>Quick Links</strong><br>
+    <ul style="padding-left: 1em;">
+      <li><a href="#_introduction">Intro</a></li>
+      <li><a href="#_what_is_docs_as_code">Docs as Code</a></li>
+      <li><a href="#_pre_requisites">Pre-reqs</a></li>
+      <li><a href="#_setting_up_your_project_repository">Setup</a></li>
+      <li><a href="#_forking_a_repository">Forking</a></li>
+      <li><a href="#_making_committing_and_pushing_changes">Committing</a></li>
+      <li><a href="#_pulling_changes_from_the_original_repository">Pulling</a></li>
+      <li><a href="#_creating_a_pull_request">Pull Requests</a></li>
+      <li><a href="#_conclusion">Conclusion</a></li>
+      <li><a href="#_additional_resources">Resources</a></li>
+    </ul>
+    <hr>
+    <strong>Did you know?</strong>
+    <p style="font-size:0.95em;">This right column can show fun facts, reminders, or ads.<br>Try customizing this area for your needs!</p>
+  </div>
+</div>
 <h1>Git Workflow</h1>
 <div class="details">
 <span id="author" class="author">Meredith Winchell, Jackie McCarthy, and Nate Alberda</span><br>
@@ -528,39 +856,38 @@ To begin, you need to set up your project repository. Setting up a new repositor
 <ol class="arabic">
 <li>
 <p>Go to GitHub and create a new repository. Make sure to initialize it with a README file.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Select on the "New" button in the repositories section.</p>
 </li>
-<li>
-<p>Fill in the repository name and description.</p>
-</li>
-<li>
-<p>Choose visibility (public or private)</p>
-</li>
-<li>
-<p>Select "Create repository"</p>
-</li>
-</ul>
 </div>
-</li>
-<li>
-<p>Clone the repository to your local machine using the command:
-<code>`
-git clone    &lt;repository-url&gt;
-</code>`</p>
-</li>
-<li>
-<p>Navigate to the cloned repository directory:
-<code>`
-cd &lt;repository-name&gt;
-</code>`</p>
-</li>
-<li>
-<p>Open the repository in your text editor or IDE (Visual Studio Code).</p>
-</li>
-</ol>
+<div class="imageblock text-center">
+<div class="content">
+<img src="https://github.com/mwinchell/PTW_320_Beta_Project/blob/main/Images/Screenshot%202025-08-02%20211029.png?raw=true" alt="Alt Text: An image showing the &quot;New repository&quot; button on GitHub">
+</div>
+</div>
+<div class="paragraph">
+<ul>
+    <li>
+      <p>Select on the "New" button in the repositories section.</p>
+   </li>
+    <li>
+      <p>Fill in the repository name and description.</p>
+   </li>
+    <li>
+      <p>Choose visibility (public or private)</p>
+   </li>
+    <li>
+      <p>Select "Create repository"</p>
+   </li>
+</ul>
+2. Clone the repository to your local machine using the command:
+<br>
+   <code>git clone    &lt;repository-url&gt;</code>
+<br>
+3. Navigate to the cloned repository directory:
+<br>
+<code>cd &lt;repository-name&gt;</code>
+<br>
+4. Open the repository in your text editor or IDE (Visual Studio Code).</p>
+
 </div>
 <div class="sect2">
 <h3 id="_when_do_you_clone">When do you clone?</h3>
@@ -589,41 +916,34 @@ cd &lt;repository-name&gt;
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Go to the repository page on GitHub.
-image::https://github.com/mwinchell/PTW_320_Beta_Project/blob/main/Images/Forking%20a%20Repository.png?raw=true[Alt Text: An image highlighting the "Fork" button on GitHub, align=center]</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Ensure you are on the main page of the repository you want to fork.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Click on the "Fork" button in the top right corner.</p>
-</li>
-<li>
-<p>Select your GitHub account as the destination for the fork.</p>
-</li>
-<li>
-<p>Clone your forked repository to your local machine using the command:
-<code>
-git clone &lt;forked-repository-url&gt;
-</code></p>
-</li>
-<li>
-<p>Navigate to the cloned forked repository directory:
-<code>
-cd &lt;forked-repository-name&gt;
-</code></p>
-</li>
-<li>
-<p>Add the original repository as a remote to keep track of changes:
-<code>
-git remote add upstream &lt;original-repository-url&gt;
-</code></p>
+<p>Go to the repository page on GitHub.</p>
 </li>
 </ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="https://github.com/mwinchell/PTW_320_Beta_Project/blob/main/Images/Forking%20a%20Repository.png?raw=true" alt="Alt Text: An image highlighting the &quot;Fork&quot; button on GitHub">
+</div>
+</div>
+<div class="paragraph">
+<p>
+   <i>Note: Ensure you are on the main page of the repository you want to fork.</i>
+<br>
+</p>
+<p>
+2. Click on the "Fork" button in the top right corner.
+</p>
+<p>
+3. Select your GitHub account as the destination for the fork.
+</p>
+4. Clone your forked repository to your local machine using the command:
+   <code>git clone &lt;forked-repository-url&gt;</code>
+5. Navigate to the cloned forked repository directory:
+   <code>cd &lt;forked-repository-name&gt;</code>
+6. Add the original repository as a remote to keep track of changes:
+   <code>git remote add upstream &lt;original-repository-url&gt;</code>
+</p>
+
 </div>
 <div class="sect2">
 <h3 id="_when_do_you_fork">When do you Fork?</h3>
@@ -662,37 +982,22 @@ git remote add upstream &lt;original-repository-url&gt;
 </li>
 <li>
 <p>Stage the changes for commit using the command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">git add &lt;file-name&gt;</code></pre>
-</div>
-</div>
+<code>git add &lt;file-name&gt;</code>
 <div class="paragraph">
 <p>Or to stage all changes:</p>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">git add .</code></pre>
-</div>
-</div>
+<code>git add .</code></pre>
 </li>
 <li>
 <p>Commit the changes with a descriptive message using the command:</p>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-shell" data-lang="shell">git commit -m "Your descriptive commit message"</code></pre>
-</div>
-</div>
+<code>git commit -m "Your descriptive commit message"</code>
 </li>
 <li>
 <p>Push your changes to your forked repository on GitHub using the command:</p>
-<div class="literalblock">
-<div class="content">
-<pre>``
-git push origin &lt;branch-name&gt;
-``</pre>
-</div>
-</div>
+<code>
+      git push origin &lt;branch-name&gt;
+</code>
+
 </li>
 </ol>
 </div>
@@ -830,19 +1135,32 @@ git push origin &lt;branch-name&gt;
 <li>
 <p>Click on the "Pull requests" tab.</p>
 </li>
-<li>
-<p>Click on the "New pull request" button.</p>
-</li>
-<li>
-<p>Select the branch you want to merge from your forked repository.</p>
-</li>
-<li>
-<p>Review the changes and add a descriptive title and comment for your pull request.</p>
-</li>
-<li>
-<p>Click on the "Create pull request" button to submit your pull request.</p>
-</li>
 </ol>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="https://github.com/mwinchell/PTW_320_Beta_Project/blob/main/Images/Locating%20Pull%20Request%20Tab.png?raw=true" alt="Alt Text: An image showing the &quot;Pull requests&quot; tab on GitHub">
+</div>
+</div>
+<div class="paragraph">
+<p>
+3. Click on the "New pull request" button.</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="https://github.com/mwinchell/PTW_320_Beta_Project/blob/main/Images/New%20Pull%20Request%20Button.png?raw=true" alt="Alt Text: An image showing the &quot;New pull request&quot; button on GitHub">
+</div>
+</div>
+<div class="paragraph">
+<p>
+   4. Select the branch you want to merge from your forked repository.
+</p>
+<p>
+   5. Review the changes and add a descriptive title and comment for your pull request.
+</p>
+<p>
+   6. Click on the "Create pull request" button to submit your pull request.</p>
+</p>
 </div>
 <div class="sect2">
 <h3 id="_when_do_you_make_a_pull_request">When do you make a pull request?</h3>
@@ -914,10 +1232,28 @@ git push origin &lt;branch-name&gt;
 </div>
 </div>
 </div>
+</div>
+</div>
 <div id="footer">
-<div id="footer-text">
-Last updated 2025-08-03 21:35:00 -0400
+  <div id="footer-text" style="color:hsla(0,0%,100%,.8);line-height:1.44;text-align:center;">
+    Last updated 2025-08-04 13:38:30 -0800
+  </div>
 </div>
-</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var openBtn = document.getElementById('openNavBtn');
+    var closeBtn = document.getElementById('closeNavBtn');
+    var drawer = document.getElementById('sideDrawer');
+    if (openBtn && closeBtn && drawer) {
+      openBtn.addEventListener('click', function() {
+        drawer.classList.add('open');
+      });
+      closeBtn.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
