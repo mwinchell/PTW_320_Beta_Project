@@ -2159,6 +2159,7 @@ pre, code, .listingblock, .literalblock {
   
   .nav-toggle-btn, .side-drawer {
     position: fixed !important;
+    display: absolute !important;
   }
 }
 
@@ -2238,6 +2239,7 @@ pre, code, .listingblock, .literalblock {
   display: block;
   animation: slideInLeft 0.25s;
 }
+
 @keyframes slideInLeft {
   from { transform: translateX(-100%); }
   to { transform: translateX(0); }
